@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
- 'blog',]
+ 'blog',]                              # Adding blog
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
