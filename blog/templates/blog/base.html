@@ -15,6 +15,13 @@
 	
 	<body>
 		<div class="page-header">
+		
+		    <!-- calling our new view "post_new" and using a bootstrap -theme of glyphicon-plus -->
+			{% if user.is_authenticated %}
+		    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus">
+			{% endif %}
+			
+			
 			<h1><a href="/">Django Girls Blog</a></h1>
 		</div>
 		<div class="content container">

@@ -1,0 +1,15 @@
+
+
+{% extends 'blog/base.html' %}
+
+
+<!-- this block of code will go to a base.html file to be used for display-->
+{% block content %}
+    <h1>New post</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+		
+		<!-- Creating a save button -->
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
