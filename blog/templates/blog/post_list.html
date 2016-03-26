@@ -11,9 +11,13 @@
 			</div>
 			<!-- I am using a Django templets tags... 
 			also creating a URL-->
-			<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+			<h1><a href="{% url 'blog.views.post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaks }}</p>
 			
-			<p>{{ post.text|linebreaks }}</p>
+			<a href="{% url 'blog.views.post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+
+        
+
 		</div>
 	{% endfor %}
 {% endblock %}
